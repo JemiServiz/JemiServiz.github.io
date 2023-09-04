@@ -23,15 +23,6 @@ html {
     box-shadow: 1px 1px 10px grey;
     background-color: rgb(186, 211, 218);
 
-    .logo {
-        color: black;
-        text-decoration: none;
-
-        span {
-            color: rgb(221, 44, 44);
-        }
-    }
-
     .tel {
         text-decoration: none;
     }
@@ -52,6 +43,16 @@ html {
         }
     }
 }
+
+.logo {
+    color: black;
+    text-decoration: none;
+
+    span {
+        color: rgb(221, 44, 44);
+    }
+}
+
 
 .section-container {
     width: 100%;
