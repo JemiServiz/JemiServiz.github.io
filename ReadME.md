@@ -1,1 +1,2 @@
-  New Projecy
+  New Project as coloborator
+  
