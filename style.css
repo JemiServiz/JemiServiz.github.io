@@ -11,6 +11,7 @@ html {
 
 .header-container {
   position: fixed;
+  z-index: 1;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -25,8 +26,14 @@ html {
 .header-container .logo {
   color: black;
 }
+.header-container .logo a {
+  text-decoration: none;
+}
 .header-container .logo span {
   color: rgb(221, 44, 44);
+}
+.header-container .tel {
+  text-decoration: none;
 }
 .header-container .menu-container {
   width: fit-content;
