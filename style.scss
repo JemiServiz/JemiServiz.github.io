@@ -1,3 +1,15 @@
+@keyframes slideFade {
+    from {
+        opacity: .85;
+
+    }
+
+    to {
+        opacity: 1;
+
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -9,6 +21,10 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 .header-container {
     position: fixed;
     z-index: 1;
@@ -17,14 +33,20 @@ html {
     align-items: center;
     padding: 20px;
     width: 100%;
-    height: 3rem;
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
+    height: 4rem;
     box-shadow: 1px 1px 10px grey;
-    background-color: rgb(186, 211, 218);
+    background-color: rgb(44, 225, 80);
 
     .tel {
+        display: flex;
         text-decoration: none;
+        color: white;
+        font-weight: 600;
+        align-items: center;
+        width: 160px;
+        height: 90%;
+        background-color: red;
+        padding: 20px 20px;
     }
 
     .menu-container {
@@ -42,20 +64,83 @@ html {
             }
         }
     }
-}
 
-.logo {
-    color: black;
-    text-decoration: none;
+    .logo {
+        display: flex;
+        align-items: center;
+        color: black;
+        text-decoration: none;
+        height: inherit;
+        width: 20%;
 
-    span {
-        color: rgb(221, 44, 44);
+        h1 {
+            font-size: 20px;
+        }
+
+        span {
+            color: rgb(221, 44, 44);
+        }
     }
 }
-
 
 .section-container {
     width: 100%;
     height: 100vh;
-    padding-top: 3rem;
+    padding-top: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-container {
+    width: 100%;
+    height: 92vh;
+    display: flex;
+
+    .slide {
+        justify-content: center;
+        display: none;
+        width: 100%;
+        height: inherit;
+
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .caption {
+            display: flex;
+            width: 30vh;
+            height: 92vh;
+            position: absolute;
+            top: 3.8rem;
+            right: 0;
+            padding: 20px 10px;
+            align-items: center;
+            text-align: center;
+            font-size: 36px;
+            z-index: 0;
+            background-color: rgb(31, 196, 226);
+            color: rgb(255, 255, 255);
+            opacity: .95;
+        }
+    }
+
+    .active {
+        display: flex;
+    }
+}
+
+@media screen and (max-width:760px) {
+    .tel {
+        display: none;
+    }
+
+    .menu-container {
+        gap: 10px;
+    }
+
+    .caption {
+        font-size: 28px !important;
+    }
 }
