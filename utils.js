@@ -22,3 +22,19 @@ export function autoSlide(slides, activeIndex) {
         }
     }
 }
+export function createSlideShow(parent, data) {
+    data.map((r, i) => {
+        const slide = elGen('div', parent, data.indexOf(r) === 0 ? 'slide active' : 'slide', null, null);
+        elGen('img', slide, null, r.img, null);
+        const info = elGen('div', slide, 'list-container', null, null);
+        if (i === 0) {
+            elGen('a', info, 'cta', null, 'Обади се').setAttribute('href', 'tel:089123456')
+        }
+        elGen('h2', info, 'caption', null, r.caption);
+        const list = elGen('ul', info, 'list', null, null)
+        r.list.map((li, i) => {
+            if (i > 5) return
+            elGen('li', list, 'list-item', null, li)
+        })
+    })
+}
