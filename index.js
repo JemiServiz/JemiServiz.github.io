@@ -19,7 +19,7 @@ setInterval(() => {
         activeIndex = 0;
     }
     autoSlide(slides, activeIndex)
-}, 2000)
+}, 2000);
 
 
 
