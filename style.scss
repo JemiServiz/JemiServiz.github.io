@@ -85,12 +85,16 @@ body {
 
 .section-container {
     width: 100%;
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    //padding-top: 4rem;
 }
+
+.hero {
+    padding-top: 4rem;
+    height: 100vh;
+}
+
 
 .carousel-container {
     width: 100%;
@@ -101,7 +105,7 @@ body {
         justify-content: center;
         display: none;
         width: 100%;
-        height: 100vvh;
+        height: 100vh;
 
         .cta {
             position: absolute;
@@ -113,8 +117,8 @@ body {
             box-shadow: inset 1px 1px 12px black;
             color: white;
             font-size: 32px;
-            left: -300px;
-            bottom: 40px;
+            left: -400px;
+            bottom: 100px;
             text-decoration: none;
             align-items: center;
             justify-content: center;
@@ -179,10 +183,60 @@ body {
     }
 }
 
+.services-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(3, 23, 109);
+    padding-top: 3rem;
+
+
+    .category-container {
+        width: 400px;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        padding: 40px;
+        margin-bottom: 3rem;
+
+        .category-title {
+            text-align: center;
+            color: white;
+        }
+
+        .category-list {
+            display: flex;
+            flex-direction: column;
+            row-gap: 10px;
+            margin: 0;
+
+            .category-list-item {
+                list-style-type: none;
+                color: white;
+            }
+
+            .category-list-item::after {
+                content: '\2713';
+                margin-left: 15px;
+            }
+        }
+    }
+}
+
 @media screen and (max-width:1023px) {
+    .section-container {
+        // padding-top: 4rem !important;
+    }
+
+    .category-container {
+        margin-top: 3rem;
+    }
+
     .slide {
         height: 100%;
-        padding-top: 3rem !important;
         flex-direction: column;
         align-self: flex-start;
 
@@ -192,6 +246,7 @@ body {
             right: 0 !important;
             bottom: 0 !important;
             justify-content: flex-start !important;
+            opacity: 1 !important;
 
             h2 {
                 font-size: 42px !important;
@@ -222,13 +277,9 @@ body {
 }
 
 @media screen and (max-width:380px) {
-    .section-container {
-        padding-top: 4rem !important;
-    }
+
 
     .slide {
-        //padding-top: 3rem !important;
-
         .list {
             justify-content: start !important;
         }

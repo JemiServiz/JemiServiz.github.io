@@ -38,3 +38,13 @@ export function createSlideShow(parent, data) {
         })
     })
 }
+
+export function createServicesList(parent, servicesData) {
+
+    servicesData.map(cat => {
+        const category = elGen('div', parent, 'category-container', null, null);
+        elGen('h4', category, 'category-title', null, cat.category)
+        const serviceList = elGen('ul', category, 'category-list', null, null);
+        cat.services.map(s => elGen('li', serviceList, 'category-list-item', null, s));
+    })
+}
