@@ -40,11 +40,20 @@ export function createSlideShow(parent, data) {
 }
 
 export function createServicesList(parent, servicesData) {
-
     servicesData.map(cat => {
         const category = elGen('div', parent, 'category-container', null, null);
         elGen('h4', category, 'category-title', null, cat.category);
         const serviceList = elGen('ul', category, 'category-list', null, null);
         cat.services.map(s => elGen('li', serviceList, 'category-list-item', null, s));
+    })
+}
+
+export function addPartners(parent, partnersData) {
+
+    partnersData.map(part => {
+        const partner = elGen('div', parent, 'partner', null, null);
+        elGen('h4', partner, 'partner-title', null, part.partnerName);
+        elGen('img', partner, 'partner-logo', part.logo, null)
+
     })
 }

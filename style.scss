@@ -135,7 +135,7 @@ body {
             display: flex;
             flex-direction: column;
             width: 30%;
-            height: 100%;
+            height: 95%;
             right: 0;
             gap: 40px;
             padding: 20px 20px;
@@ -183,6 +183,23 @@ body {
     }
 }
 
+.services {
+    display: flex;
+    flex-direction: column;
+
+    .services-title {
+        position: relative;
+        top: 3rem;
+        width: 100%;
+        height: 3rem;
+        margin: 3rem;
+        text-align: center;
+        color: white;
+        font-size: 48px;
+    }
+}
+
+
 .services-container {
     width: 100%;
     display: flex;
@@ -226,10 +243,66 @@ body {
     }
 }
 
-@media screen and (max-width:1023px) {
-    .section-container {
-        // padding-top: 4rem !important;
+.partners {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgb(3, 23, 109);
+    color: white;
+    font-size: 48px;
+    text-align: center;
+}
+
+.partners-header {
+    width: 100%;
+    height: 3rem;
+    margin: 3rem 0rem;
+    text-align: center;
+    color: white;
+    font-size: 48px;
+}
+
+
+.partners-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    .partner {
+        height: inherit;
+
+        .partner-title {
+            font-size: 26px;
+        }
     }
+
+}
+
+.contacts-container {
+    background-color: rgb(3, 23, 109);
+
+    iframe {
+        width: 100%;
+        height: 200px;
+    }
+}
+
+.contacts {
+    background-color: rgb(3, 23, 109);
+    padding: 3rem;
+}
+
+footer {
+    width: 100%;
+    height: 3rem;
+    background-color: rgb(3, 23, 109);
+    color: white;
+    font-size: 18px;
+    text-align: center;
+}
+
+@media screen and (max-width:1023px) {
 
     .category-container {
         margin-top: 3rem;
